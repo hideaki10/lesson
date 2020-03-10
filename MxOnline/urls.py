@@ -46,8 +46,8 @@ urlpatterns = [
     # img upload of url
     url(r'^media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT}),
 
-
     url(r'^op/', include(('apps.operations.urls', "operations"), namespace="op")),
 
+    url(r'^users/', include(('apps.users.urls', "users"), namespace="users")),
 
 ]

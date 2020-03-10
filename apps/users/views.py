@@ -7,9 +7,16 @@ from apps.users.forms import LoginForm, DynamicLoginForm, DynamicLoginPostForm, 
 import redis
 from MxOnline.settings import REDIS_HOST, REDIS_PORT
 from apps.users.models import UserProfile
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 # Create your views here.
+
+class UserInfoView(LoginRequiredMixin, View):
+    def get(self, request, *args, **kwarg):
+        login_url = "/login/"
+        return render(request, "usercenter-info.html")
+
 
 class RegisterView(View):
     def get(self, request, *args, **kwarg):

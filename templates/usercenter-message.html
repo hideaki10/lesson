@@ -43,7 +43,7 @@
 	                                </dd>
                                 </dl>
                                 <div class="btn">
-	                                <a class="personcenter fl" href="usercenter-info.html">进入个人中心</a>
+	                                <a class="personcenter fl" href="{% url "users:info" %}">进入个人中心</a>
 	                                <a class="fr" href="/logout/">退出</a>
                                 </div>
                             </div>
@@ -84,7 +84,7 @@
 	<div class="wp list personal_list">
 	<div class="left">
         <ul>
-            <li class="active2"><a href="usercenter-info.html">个人资料</a></li>
+            <li class="active2"><a href="{% url "users:info" %}">个人资料</a></li>
             <li ><a href="usercenter-mycourse.html">我的课程</a></li>
             <li ><a href="usercenter-fav-course.html">我的收藏</a></li>
             <li >
